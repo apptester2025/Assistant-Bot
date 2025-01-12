@@ -1,0 +1,28 @@
+# Virtual environment
+TTVenv/
+
+# Environment vars
+.env
+
+# System Files
+.DS_Store 
+Thumbs.db
+
+# Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE or editor specific files
+.vscode/
+.idea/
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# PyCharm specific files
+.idea/
+
+# Miscellaneous
+*.log
