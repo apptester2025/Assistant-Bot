@@ -106,5 +106,7 @@ async def on_message(message):
         # Send the response as one message if it's within the length limit
         await message.channel.send(response)
 
-# Run the bot
-client.run(DISCORD_TOKEN)
+# Bind to a port and run the bot
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 4000))
+    client.run(DISCORD_TOKEN)
