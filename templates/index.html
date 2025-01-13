@@ -1,69 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='vite.svg') }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FEMA Compliance Bot</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-</head>
-<body>
-    <div class="container">
-        <button id="theme-toggle" aria-label="Toggle dark/light mode">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-        </button>
-
-        <header>
-            <h1>FEMA Compliance Assistant</h1>
-            <p>A Tetra Tech 1000 Challenge Project</p>
-        </header>
-
-        <main>
-            <section id="bot-info" class="card">
-                <h2>Connect with the Bot</h2>
-                <a href="#" class="button">Discord Channel</a>
-                <p>Team Contact: <a href="mailto:ryan.price@tetratech.com">ryan.price@tetratech.com</a></p>
-            </section>
-
-            <section id="useful-links" class="card">
-                <h2>Useful FEMA Links</h2>
-                <ul>
-                    <li><a href="https://www.fema.gov/assistance/public" target="_blank">FEMA Public Assistance</a></li>
-                    <li><a href="https://www.fema.gov/emergency-managers/risk-management/hazard-mitigation-planning" target="_blank">Hazard Mitigation Planning</a></li>
-                    <li><a href="https://www.fema.gov/emergency-managers/national-preparedness" target="_blank">National Preparedness</a></li>
-                </ul>
-            </section>
-
-            <section id="project-info" class="card">
-                <h2>About the Project</h2>
-                <p>This project is part of the Tetra Tech 1000 Challenge, showcasing innovation in AI applications within Tetra Tech.</p>
-                <p><strong>Note:</strong> This is a team project not hosted, verified, reviewed, or otherwise recommended for use by Tetra Tech. It is a development project only, not meant for production. All use is at your own risk.</p>
-            </section>
-
-            <section id="external-links" class="card">
-                <h2>External Resources</h2>
-                <ul>
-                    <li><a href="https://github.com/ppdrmonitor/FEMA-Compliance-Bot" target="_blank">GitHub Repository</a></li>
-                    <li><a href="https://render.com/" target="_blank">Render</a></li>
-                    <li><a href="https://openai.com/" target="_blank">OpenAI</a></li>
-                    <li><a href="https://www.anthropic.com/" target="_blank">Claude.AI</a></li>
-                    <li><a href="https://www.tetratech.com/" target="_blank">Tetra Tech</a></li>
-                </ul>
-            </section>
-
-            <section id="legal-info" class="card">
-                <h2>Legal Information</h2>
-                <p>We are not collecting any data outside of what OpenAI collects using the developer tier paid service. Please note that during testing, no actual company information, blank company files, or any work-related data should be used unless approved by corporate. To date, there has been NO approval for such use.</p>
-                <p>This project is intended solely for entry into a competition and has no other purpose.</p>
-                <a href="#" class="button">Privacy Policy</a>
-            </section>
-        </main>
-
-        <footer>
-            <p>&copy;FEMA Compliance Assistant. 2025 TECH 100 CHALLENGE.</p>
-        </footer>
-    </div>
-    <script src="{{ url_for('static', filename='theme.js') }}"></script>
-</body>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="{{ url_for('static', filename='main.js') }}"></script>
+  </body>
 </html>
-

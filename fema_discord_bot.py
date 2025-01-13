@@ -1,6 +1,6 @@
 from dotenv import load_dotenv
 import os
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 import threading
 import discord
 from langchain_openai import ChatOpenAI  # Correct import for chat models
@@ -175,6 +175,13 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return render_template('index.html')
+
+@app.route('/api/discord-invite')
+def discord_invite():
+    # Replace this with your actual Discord invite link logic
+    return jsonify({
+        "invite_url": "https://discord.gg/svVAnQ8z"
+    })
 
 def run_flask():
     port = int(os.environ.get("PORT", 4000))

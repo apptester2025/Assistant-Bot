@@ -4,10 +4,6 @@ TTVenv/
 # Environment vars
 .env
 
-# System Files
-.DS_Store 
-Thumbs.db
-
 # Python bytecode files
 __pycache__/
 *.pyc
@@ -25,4 +21,26 @@ __pycache__/
 .idea/
 
 # Miscellaneous
+logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
