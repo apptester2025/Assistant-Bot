@@ -1,6 +1,6 @@
 from dotenv import load_dotenv
 import os
-from flask import Flask
+from flask import Flask, render_template
 import threading
 import discord
 from langchain_openai import ChatOpenAI  # Correct import for chat models
