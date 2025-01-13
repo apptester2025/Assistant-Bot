@@ -174,7 +174,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "FEMA Compliance Bot is running!"
+    return render_template('index.html')
 
 def run_flask():
     port = int(os.environ.get("PORT", 4000))
