@@ -9,6 +9,7 @@ load_dotenv()
 class GroupMeBot:
     def __init__(self, convo):
         self.bot_id = os.getenv('GROUPME_BOT_ID')  # Your bot's ID
+        self.command_prefix = "/bot"  # Command prefix
         self.blueprint = Blueprint('groupme_bot', __name__)
         self._setup_routes()
 
@@ -27,9 +28,9 @@ class GroupMeBot:
 
             # Process user messages (ignore bot messages)
             if 'text' in data and data['sender_type'] != 'bot':
-                # Check if the bot is mentioned in the message
-                if self.is_mentioned(data):
-                    user_message = data['text']
+                # Only respond to messages with the correct prefix
+                if message.startswith(self.command_prefix):
+                    user_message = message[len(self.command_prefix):].strip()
                     response = self.generate_response(user_message)
                     self.send_message(response)
 
