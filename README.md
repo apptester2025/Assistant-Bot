@@ -144,4 +144,4 @@ This will start a local server at `http://localhost:3000`.
 
 ## License
 
-[Add your license information here]
+This project is open-source and available under the MIT License.
