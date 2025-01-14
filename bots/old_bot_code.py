@@ -202,7 +202,7 @@ fema_chatbot = ConversationChain(
     verbose=True
 )
 
-# Create a Discord clientz=
+# Create a Discord client=
 intents = discord.Intents.default()
 intents.messages = True
 client = discord.Client(intents=intents)
@@ -242,3 +242,4 @@ if __name__ == "__main__":
     
     # Run Discord bot in main thread
     client.run(DISCORD_TOKEN)
+    

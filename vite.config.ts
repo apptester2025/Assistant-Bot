@@ -11,7 +11,12 @@ export default defineConfig({
       output: {
         entryFileNames: 'main.js',
         chunkFileNames: '[name].js',
-        assetFileNames: '[name][extname]'
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name === 'index.css') {
+            return 'style.css';
+          }
+          return '[name].[ext]';
+        }
       }
     }
   },

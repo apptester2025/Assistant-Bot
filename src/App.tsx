@@ -15,7 +15,7 @@ function App() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <Bot className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
-              <span className="text-xl font-bold dark:text-white">FEMA Compliance Bot</span>
+              <span className="text-xl font-bold dark:text-white">FEMA Compliance Assistant</span>
             </div>
             <div className="flex items-center space-x-4">
               <button
@@ -49,7 +49,7 @@ function App() {
               Streamline Your FEMA Compliance
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-              Automate your FEMA compliance process with our powerful Discord bot. Save time and ensure accuracy in your documentation.
+              Automate your FEMA compliance process with our powerful Discord Assistant. Save time and ensure accuracy in your documentation.
             </p>
             <div className="flex justify-center space-x-4">
               <a
@@ -106,7 +106,7 @@ function App() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
               <Bot className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
-              <span className="text-sm dark:text-white">© 2024 FEMA Compliance Bot</span>
+              <span className="text-sm dark:text-white">© 2025 FEMA Compliance Assistant</span>
             </div>
             <div className="flex space-x-6">
               <a href="https://github.com/ppdrmonitor/FEMA-Compliance-Bot" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">

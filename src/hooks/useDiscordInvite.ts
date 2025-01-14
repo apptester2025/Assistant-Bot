@@ -1,4 +1,6 @@
+// hooks/useDiscordInvite.ts
 import { useState, useEffect } from 'react';
+import { DiscordInviteResponse } from '../types/discord';
 
 export default function useDiscordInvite() {
   const [inviteUrl, setInviteUrl] = useState<string>('');
@@ -8,7 +10,7 @@ export default function useDiscordInvite() {
   useEffect(() => {
     fetch('/api/discord-invite')
       .then(response => response.json())
-      .then(data => {
+      .then((data: DiscordInviteResponse) => {
         setInviteUrl(data.invite_url);
         setLoading(false);
       })
