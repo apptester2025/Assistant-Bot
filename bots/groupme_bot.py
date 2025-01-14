@@ -58,5 +58,5 @@ class GroupMeBot:
         }
         requests.post(url, json=payload)
 
-def run(self):
-    self.bot.run(self.token)
+    #def run(self):
+    #    self.bot.run(self.token)

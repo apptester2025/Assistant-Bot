@@ -42,7 +42,7 @@ def start_groupMe_bot():
     #gpt-4o-mini
     llm = LLMSetup("gpt-4o-mini",0,selected_instruction,selected_name)
     bot = GroupMeBot(llm)
-    bot.run()
+    #bot.run()
 
 if __name__ == '__main__':
 
