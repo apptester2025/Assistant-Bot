@@ -1,46 +1,55 @@
-# Virtual environment
-TTVenv/
-
-# Environment vars
-.env
-
-# Python bytecode files
+# Python
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+venv/
+blueprints/__pycache__/
+bots/__pycache__/
+core/__pycache__/
+expert_instructions/__pycache__/
 
-# IDE or editor specific files
-.vscode/
-.idea/
-
-# Jupyter notebook checkpoints
-.ipynb_checkpoints/
-
-# PyCharm specific files
-.idea/
-
-# Miscellaneous
-logs
-*.log
+# Node.js
+node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-node_modules
-dist
-dist-ssr
+
+# Build and Distribution
+dist/
+dist-ssr/
+build/
+static/
+.next/
+out/
 *.local
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-Thumbs.db
+# IDE and Editors
+.vscode/
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Logs and Debug
+logs/
+*.log
+
+# Configuration Files
+.env
+*.cache
+tailwind.config.js
+postcss.config.js
+eslint.config.js
+
+# Operating System
+.DS_Store
+Thumbs.db
+
+# Deployment
+*.yaml
