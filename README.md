@@ -1,82 +1,147 @@
 # FEMA Compliance Bot
 
-The FEMA Compliance Bot is a lightweight Discord bot designed to demonstrate how AI can streamline workflows by integrating Python-based tools. This bot is part of the TECH 1000 CHALLENGE at Tetra Tech, showcasing how quickly AI solutions can be implemented into tools we already use.
+A lightweight Discord bot demonstrating AI-powered workflow automation through Python-based tools. This bot helps streamline FEMA compliance processes through Discord integration.
 
 ## Features
-- GPT-powered responses for data validation and reasoning.
-- Flask server integration to prevent timeout issues on Render.
-- Hosted in the cloud for 24/7 availability.
 
----
+- Discord integration for real-time communication
+- OpenAI GPT model integration for intelligent responses
+- Web interface built with TypeScript and Tailwind CSS
+- Cross-platform compatibility (Windows, Linux, macOS)
+
+## Prerequisites
+
+Before running this project, make sure you have the following installed:
+
+- Python 3.x ([Download](https://python.org))
+- Node.js and npm ([Download](https://nodejs.org))
+- Git ([Download](https://git-scm.com))
 
 ## Local Setup
 
-Follow these steps to set up and run the bot locally:
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/ppdrmonitor/FEMA-Compliance-Bot.git
+   cd FEMA-Compliance-Bot
+   ```
 
-### Prerequisites
-1. **Python 3.11.11**: Ensure Python is installed. You can download it from [python.org](https://www.python.org/).
-2. **Dependencies**: Install the required Python packages.
-3. **API Keys**: Obtain API keys for the services used by the bot (e.g., OpenAI, Discord).
-
-### Installation on Mac Sequia 15.2 (24C101) (not tested anywhere else locally)
-I vary between using pyenv & homebrew to manage python packages on my computer. For this exmaple I've used pyenv to set my local python to version @3.11.11 - this only impacted local development. Once the code was pushed to the cloud the version running on Render is @3.11.11 by default as of writing this. 
-
-**THIS IS UNSTABLE AND WILL NEED TO BE UPDATED FOR PRODUCTION**
-
-1. Clone the repository:
-
-	```git clone https://github.com/ppdrmonitor/FEMA-Compliance-Bot.git```
-	```cd FEMA-Compliance-Bot```
+2. **Set Up Python Environment**
+   ```bash
+   python -m venv venv
    
-
-2. Install dependencies:
+   # On Windows
+   venv\Scripts\activate
    
-	```pip install -r requirements.txt```
+   # On macOS/Linux
+   source venv/bin/activate
+   
+   pip install -r requirements.txt
+   ```
 
-3. Set up your .env file: Create a .env file in the project root and add your API keys:
-	
-	```DISCORD_TOKEN=your_discord_bot_token```
-	```OPENAI_API_KEY=your_openai_api_key```
+3. **Install Node.js Dependencies**
+   ```bash
+   npm install
+   ```
 
-4. Run the bot:
-	
-	```python fema_discord_bot.py```
+4. **Configure Environment Variables**
+   Create a `.env` file in the project root and add necessary variables:
+   ```
+   DISCORD_TOKEN=your_discord_token
+   # Add other required environment variables
+   ```
 
-The bot should now be running locally. You can invite it to your server using the bot's invite link.
+5. **Build Frontend Assets**
+   ```bash
+   npm run build
+   ```
 
-### Cloud Hosting with Render
+6. **Run the Application**
+   ```bash
+   python run.py
+   ```
 
-To keep the bot active 24/7, host it on Render.
+## Key Dependencies
 
-1. Create a new web service on Render.
-2. Connect your GitHub repository to the service.
-3. Set up the environment variables for API keys in Render's dashboard.
-4. Deploy the service.
+### Python Packages
+- discord.py - Discord API integration
+- openai - GPT model integration
+- flask - Web server functionality
 
-### Flask Integration
-The bot uses Flask to handle the web server and prevent Render's timeout issues. The fema_discord_bot.py file includes the necessary configuration.
+### Node.js Packages
+- vite - Frontend build tool
+- tailwindcss - UI styling
+- typescript - Type-safe JavaScript
 
-### Roadmap
+## Cloud Deployment Options
 
-Potential AI Implementations for TDR
+### Render (Recommended for Testing)
+1. Create an account at [render.com](https://render.com)
+2. Create a new Web Service
+3. Connect your GitHub repository
+4. Configure build command:
+   ```bash
+   npm install && npm run build && pip install -r requirements.txt
+   ```
+5. Set start command:
+   ```bash
+   python run.py
+   ```
+6. Add environment variables in the Render dashboard
 
-1. GroupMe Bot: Extend the functionality of this bot to integrate with GroupMe, which is more widely used in TDR.
+### AWS (Free Tier)
+1. Sign up at [aws.amazon.com](https://aws.amazon.com)
+2. Install AWS CLI and Elastic Beanstalk CLI
+3. Initialize and deploy:
+   ```bash
+   eb init -p python-3.x fema-compliance-bot
+   eb create fema-compliance-bot-env
+   eb deploy
+   ```
 
-2. Field Data Automation: Automate workflows for field monitors:
-	- Validate collection log images.
-	- Extract data and check for backend matches.
-	- Generate PDFs with consistent naming conventions and upload them to Box folders.
+### Heroku
+1. Create account at [heroku.com](https://heroku.com)
+2. Install Heroku CLI
+3. Deploy:
+   ```bash
+   heroku login
+   heroku create fema-compliance-bot
+   git push heroku main
+   heroku config:set DISCORD_TOKEN=your_discord_token
+   ```
 
-3. Advanced Data Tools:
-	- Verify data context.
-	- Generate custom responses for response teams.
-	- Perform advanced data reasoning for field tasks.
+### Azure
+1. Sign up at [azure.microsoft.com](https://azure.microsoft.com)
+2. Install Azure CLI
+3. Deploy:
+   ```bash
+   az webapp up --name fema-compliance-bot --resource-group MyResourceGroup --runtime "PYTHON|3.9"
+   ```
 
-These applications could significantly enhance productivity and reduce human error in TDR workflows.
+## Development
 
-### Contribution
-Contributions are welcome! Fork the repository and submit a pull request with your enhancements.
+To run the frontend development server:
+```bash
+npm run dev
+```
 
-### License
-This project is open-source and available under the MIT License.
+This will start a local server at `http://localhost:3000`.
 
+## Command Reference
+
+| Command | Description |
+|---------|-------------|
+| `npm run build` | Build frontend assets |
+| `npm run dev` | Start development server |
+| `python run.py` | Run backend server |
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## License
+
+[Add your license information here]
