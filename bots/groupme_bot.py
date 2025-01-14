@@ -35,7 +35,7 @@ class GroupMeBot:
             message = data.get('text', 'No text')
             print(f"📩 Message received from {sender}: {message}")
 
-            logger.info("Received incoming message: %s", message)
+            logger.info("📩 Received incoming message: %s", message)
 
             # Process user messages (ignore bot messages)
             if 'text' in data and data['sender_type'] != 'bot':
