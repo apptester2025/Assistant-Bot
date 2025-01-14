@@ -9,7 +9,7 @@ load_dotenv()
 # Set up Discord client intents for handling messages
 intents = discord.Intents.default()
 intents.messages = True
-#intents.message_content = True  # Required for reading user messages
+intents.message_content = True  # Required for reading user messages
 client = discord.Client(intents=intents)
 
 
@@ -22,7 +22,7 @@ class DiscordBot:
 
         @self.bot.event
         async def on_ready():
-            print(f'{self.bot.user} has connected to Discord!')
+            print(f'✅ {self.bot.user} has connected to Discord!')
 
         @self.bot.event
         async def on_message(message):
@@ -44,7 +44,3 @@ class DiscordBot:
 
     def run(self):
         self.bot.run(self.token)
-
-# Example usage with convo instance (assuming convo has a run() method)
-# bot = DiscordBot(convo)
-# bot.run()

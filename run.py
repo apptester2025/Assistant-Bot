@@ -1,17 +1,11 @@
 from dotenv import load_dotenv
 import os
 import threading
-#from flask import Flask
-#from flask_cors import CORS
 from app import create_app
-from flask import render_template
 from bots import DiscordBot
+from bots import GroupMeBot
 from core import LLMSetup
 from expert_instructions import FemaExpert
-#from langchain_openai import ChatOpenAI  # Correct import for chat models
-#from langchain.memory import ConversationBufferMemory
-#from langchain.chains import ConversationChain
-#from langchain.prompts import PromptTemplate
 
 # Load environment variables from .env file
 load_dotenv()
@@ -25,11 +19,7 @@ os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 # Create the Flask app
 app = create_app()
 
-@app.route('/')
-def home():
-    return render_template('index.html')
-
-# Setup Bot with LLM
+# Setup Discord bot with LLM
 def start_discord_bot():
     # Select an instruction/name dynamically
     selected_instruction = FemaExpert.instruction
@@ -42,12 +32,27 @@ def start_discord_bot():
     bot = DiscordBot(llm)
     bot.run()
 
+# Setup Group Me bot with LLM
+def start_groupMe_bot():
+    # Select an instruction/name dynamically
+    selected_instruction = FemaExpert.instruction
+    selected_name = FemaExpert.name
+
+    # Create the LLM and conversation chain
+    #gpt-4o-mini
+    llm = LLMSetup("gpt-4o-mini",0,selected_instruction,selected_name)
+    bot = GroupMeBot(llm)
+
 if __name__ == '__main__':
 
-    # Start bot in a separate thread
-    bot_thread = threading.Thread(target=start_discord_bot)
-    bot_thread.start()
+    # Start Discord bot in a separate thread
+    discord_bot_thread = threading.Thread(target=start_discord_bot)
+    discord_bot_thread.start()
     
+    # Start GroupMe bot in a separate thread
+    groupMe_bot_thread = threading.Thread(target=start_groupMe_bot)
+    groupMe_bot_thread.start()
+
     # Start Flask server
     port = int(os.environ.get("PORT", 4000))
     app.run(host='0.0.0.0', port=port)
