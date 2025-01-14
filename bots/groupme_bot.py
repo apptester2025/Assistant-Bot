@@ -14,6 +14,7 @@ logger = logging.getLogger(__name__)
 class GroupMeBot:
     def __init__(self, convo):
         self.bot_id = os.getenv('GROUPME_BOT_ID')  # Your bot's ID
+        self.convo = convo #assigns instance of llm
         self.command_prefix = "/bot"  # Command prefix
         self.blueprint = Blueprint('groupme_bot', __name__)
         self._setup_routes()
@@ -56,7 +57,7 @@ class GroupMeBot:
         """
         Logic to generate a bot response.
         """
-        return f"Echo: {user_message}"
+        return self.convo.run(user_message)
 
     def send_message(self, message):
         """
