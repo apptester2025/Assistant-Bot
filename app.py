@@ -1,7 +1,7 @@
 from flask import Flask
 
 from flask_cors import CORS
-from blueprints import main, api
+from blueprints import main, api, groupme
 
 def create_app():
     """
@@ -11,6 +11,7 @@ def create_app():
 
     # Register blueprints
     app.register_blueprint(api, url_prefix='/api')
+    app.register_blueprint(groupme, url_prefix='/groupme_bot')
     app.register_blueprint(main)  # No prefix, serves as root route handler
 
     # Enable CORS for all routes
