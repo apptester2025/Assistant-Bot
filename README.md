@@ -1,12 +1,41 @@
-# FEMA Compliance Bot
+# FEMA Compliance Assistant (Alpha)
 
-A lightweight Discord bot demonstrating AI-powered workflow automation through Python-based tools. This bot helps streamline FEMA compliance processes through Discord integration.
+A lightweight, multi-platform AI assistant designed to simplify FEMA policy interpretation and compliance. Currently focused on basic parsing capabilities, this assistant helps users navigate FEMA guidelines through natural language queries and contextual AI insights.
 
 ## Features
 
-- Discord integration for real-time communication
-- OpenAI GPT model integration for intelligent responses
-- Web interface built with TypeScript and Tailwind CSS
+- **Policy Parsing & Insights**:  
+  Utilizes GPT-based AI to analyze FEMA documents like the Public Assistance Program and Policy Guide (PAPPG) and provide actionable interpretations.  
+
+- **Multi-Platform Integration**:  
+  Accessible via Discord and GroupMe for real-time collaboration and support.
+
+- **Ease of Use**:  
+  Lightweight design with a conversational interface tailored to immediate policy interpretation needs.
+
+## Future Roadmap
+
+- **Advanced Policy Analysis**:  
+  Automated document updates and contextual guidance for complex scenarios.
+
+- **Workflow Automation**:  
+  Streamlined ticketing, logging, and FEMA compliance workflows.
+
+- **Dynamic Training Modules**:  
+  AI-powered, adaptive training materials aligned with evolving FEMA policies.
+
+- **Multi-Project Management**:  
+  Tools for tracking assignments and compliance across multiple operations.
+
+- **Platform Expansion**:  
+  Web, desktop, and mobile application integrations to enhance accessibility.
+
+
+## Dev Highlights
+
+- Discord & GroupMe integration
+- OpenAI GPT model integration
+- Landing page built with TypeScript and Tailwind CSS
 - Cross-platform compatibility (Windows, Linux, macOS)
 
 ## Prerequisites
@@ -46,7 +75,9 @@ Before running this project, make sure you have the following installed:
 4. **Configure Environment Variables**
    Create a `.env` file in the project root and add necessary variables:
    ```
-   DISCORD_TOKEN=your_discord_token
+   OPENAI_API_KEY=your_openai_api_key
+   DISCORD_TOKEN=your_discord_bot_token
+   GROUPME_BOT_ID=your_groupme_bot_id
    # Add other required environment variables
    ```
 

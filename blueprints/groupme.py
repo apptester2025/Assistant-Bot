@@ -4,7 +4,7 @@ import logging
 from flask import Blueprint, request, jsonify
 from dotenv import load_dotenv
 from core import LLMSetup
-from expert_instructions import FemaExpert
+from expert_instructions import PAExpert
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -46,8 +46,8 @@ def generate_groupme_response(user_message):
     Generate a response to the user message. This is customizable.
     """
     # Select an instruction/name dynamically
-    selected_instruction = FemaExpert.instruction
-    selected_name = FemaExpert.name
+    selected_instruction = PAExpert.instruction
+    selected_name = PAExpert.name
     try:
         llm = LLMSetup("gpt-4o-mini", 0, selected_instruction, selected_name)
         return llm.run(user_message)
