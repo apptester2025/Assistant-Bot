@@ -11,6 +11,8 @@ load_dotenv()
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
 
+
+
 class GroupMeBot:
     def __init__(self, convo):
         self.bot_id = os.getenv('GROUPME_BOT_ID')  # Your bot's ID
