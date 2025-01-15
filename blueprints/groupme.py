@@ -73,7 +73,7 @@ def split_message(response, max_length):
     chunks.append(response)  # Add the last chunk
     return chunks
 
-def send_groupme_chunks(response_message, max_length=2000):
+def send_groupme_chunks(response_message, max_length=1000):
     """
     Sends a long message in chunks via GroupMe webhook.
     """
