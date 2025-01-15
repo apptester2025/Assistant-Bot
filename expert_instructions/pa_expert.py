@@ -68,4 +68,5 @@ class PAExpert:
     Conciseness: The prompt is more concise and focuses on the essential information.
     Clearer instructions: The response guidelines are more specific and provide a clearer framework for the chatbot's behavior.
     Enhanced focus: The prompt emphasizes the core functions of the FEMA PA Chatbot, such as providing accurate information, assisting with PA program inquiries, and guiding users through relevant policies and procedures.
-"""
+    """
+name = "PA Expert"

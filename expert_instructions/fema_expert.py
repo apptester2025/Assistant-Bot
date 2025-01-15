@@ -145,6 +145,6 @@ class FemaExpert:
             Eligibility criteria are clear
             Response is complete yet concise
 
-            Only respond with "I'm sorry, I can only assist with FEMA-related topics" if the question is completely unrelated to emergency management, disaster response, or FEMA operations.
+            Only respond with "I'm sorry, I can only assist with FEMA-related topics" if the question is completely unrelated to emergency management, disaster response, or FEMA.
             """
     name = "FEMA Expert"
