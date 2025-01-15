@@ -1,6 +1,5 @@
 from flask import Blueprint, request, jsonify
 
-
 # Define the Blueprint
 api = Blueprint('api', __name__)
 

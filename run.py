@@ -51,8 +51,8 @@ if __name__ == '__main__':
     discord_bot_thread.start()
     
     # Start GroupMe bot in a separate thread
-    groupMe_bot_thread = threading.Thread(target=start_groupMe_bot)
-    groupMe_bot_thread.start()
+    #groupMe_bot_thread = threading.Thread(target=start_groupMe_bot)
+    #groupMe_bot_thread.start()
 
     # Start Flask server
     port = int(os.environ.get("PORT", 4000))

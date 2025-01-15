@@ -6,9 +6,6 @@ main = Blueprint('main', __name__)
 
 @main.route('/')
 def home():
-    
-    #debug dir issues
-    print(f"Current working directory: {os.getcwd()}")
 
     # Serve the minified index.html
     return render_template('index.html')
