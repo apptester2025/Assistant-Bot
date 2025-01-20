@@ -1,10 +1,12 @@
 # blueprints/teams.py
 # temporary route hack to just make it work
 # easier to use if wrapped in a package
-
-from flask import Flask, request, Response
+import os
+from flask import Blueprint, request, Response
 from botbuilder.core import BotFrameworkAdapter, BotFrameworkAdapterSettings
 from botbuilder.schema import Activity
+import logging
+from dotenv import load_dotenv
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -34,7 +36,7 @@ teams = Blueprint('teams_bot', __name__)
 adapter_settings = BotFrameworkAdapterSettings(app_id=TEAMS_APP_ID, app_password=TEAMS_BOT_ID)
 adapter = BotFrameworkAdapter(adapter_settings)
 
-@app.route("/teams/webhook", methods=["POST"])
+@teams.route("/teams/webhook", methods=["POST"])
 def messages():
     if request.method == "POST":
         body = request.json

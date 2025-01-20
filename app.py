@@ -14,7 +14,7 @@ def create_app():
     #https://fema-compliance-bot.onrender.com/groupme_bot/groupme/webhook
     app.register_blueprint(groupme, url_prefix='/groupme_bot')
     #https://fema-compliance-bot.onrender.com/teams_bot/teams/webhook
-    app.register_blueprint(groupme, url_prefix='/teams_bot')
+    app.register_blueprint(teams, url_prefix='/teams_bot')
     app.register_blueprint(main)  # No prefix, serves as root route handler
 
     # Enable CORS for all routes
