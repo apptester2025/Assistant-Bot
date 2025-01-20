@@ -1,3 +1,10 @@
+# bots/groupme_bot.py
+# failed implementation
+# need to code more in Python, lol
+
+# todo
+# make a GroupMe package that mirrors Discord
+
 import os
 import logging
 from dotenv import load_dotenv
@@ -10,8 +17,6 @@ load_dotenv()
 # Set up logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
-
-
 
 class GroupMeBot:
     def __init__(self, convo):
@@ -71,6 +76,3 @@ class GroupMeBot:
             "text": message
         }
         requests.post(url, json=payload)
-
-    #def run(self):
-    #    self.bot.run(self.token)

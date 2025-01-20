@@ -1,5 +1,5 @@
 from .fema_expert import FemaExpert
 from .pa_expert import PAExpert
-#from .flood_expert import FloodExpert
+from .sop_expert import SOPExpert
 
-__all__ = ["FemaExpert, PAExpert"]
+__all__ = ["FemaExpert, PAExpert", "SOPExpert"]

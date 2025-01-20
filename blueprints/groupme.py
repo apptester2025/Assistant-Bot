@@ -1,10 +1,14 @@
+# blueprints/groupme.py
+# temporary route hack to just make it work
+# easier to use if wrapped in a package
+
 import os
 import requests
 import logging
 from flask import Blueprint, request, jsonify
 from dotenv import load_dotenv
 from core import LLMSetup
-from expert_instructions import PAExpert
+from expert_instructions import FemaExpert, PAExpert, SOPExpert
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -46,8 +50,8 @@ def generate_groupme_response(user_message):
     Generate a response to the user message. This is customizable.
     """
     # Select an instruction/name dynamically
-    selected_instruction = PAExpert.instruction
-    selected_name = PAExpert.name
+    selected_instruction = SOPExpert.instruction
+    selected_name = SOPExpert.name
     try:
         llm = LLMSetup("gpt-4o-mini", 0, selected_instruction, selected_name)
         return llm.run(user_message)

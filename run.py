@@ -12,6 +12,7 @@ load_dotenv()
 
 # Set open ai key (ugly spot to have this)
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+ASSISTANT_1_ID = os.getenv("ASSISTANT_1_ID")
 
 # Set API keys
 os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
@@ -21,6 +22,7 @@ app = create_app()
 
 # Setup Discord bot with LLM
 def start_discord_bot():
+
     # Select an instruction/name dynamically
     selected_instruction = FemaExpert.instruction
     selected_name = FemaExpert.name
@@ -32,17 +34,17 @@ def start_discord_bot():
     bot = DiscordBot(llm)
     bot.run()
 
-# Setup Group Me bot with LLM
+# Setup Group Me bot with LLM (currently not being used)
+# Placeholder for when we make a custom wrapper for GroupMe
 def start_groupMe_bot():
+
     # Select an instruction/name dynamically
     selected_instruction = FemaExpert.instruction
     selected_name = FemaExpert.name
 
     # Create the LLM and conversation chain
     #gpt-4o-mini
-    llm = LLMSetup("gpt-4o-mini",0,selected_instruction,selected_name)
-    bot = GroupMeBot(llm)
-    #bot.run()
+    #llm = LLMSetup("gpt-4o-mini",0,selected_instruction,selected_name)
 
 if __name__ == '__main__':
 
