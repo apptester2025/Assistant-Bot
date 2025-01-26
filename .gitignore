@@ -7,7 +7,6 @@ bots/__pycache__/
 core/__pycache__/
 expert_instructions/__pycache__/
 
-
 # Node.js
 node_modules/
 npm-debug.log*
@@ -33,9 +32,6 @@ out/
 *.njsproj
 *.sln
 *.sw?
-
-# Jupyter Notebooks
-.ipynb_checkpoints/
 
 # Logs and Debug
 logs/
