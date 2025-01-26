@@ -1,7 +1,7 @@
 # Python
 __pycache__/
 *.py[cod]
-venv/
+env/
 blueprints/__pycache__/
 bots/__pycache__/
 core/__pycache__/

@@ -5,7 +5,7 @@ from app import create_app
 from bots import DiscordBot
 from bots import GroupMeBot
 from core import LLMSetup
-from expert_instructions import FemaExpert
+from expert_instructions import AssistantExpert
 
 # Load environment variables from .env file
 load_dotenv()
@@ -24,8 +24,8 @@ app = create_app()
 def start_discord_bot():
 
     # Select an instruction/name dynamically
-    selected_instruction = FemaExpert.instruction
-    selected_name = FemaExpert.name
+    selected_instruction = AssistantExpert.instruction
+    selected_name = AssistantExpert.name
 
     # Create the LLM and conversation chain
     #gpt-4o-mini
@@ -39,8 +39,8 @@ def start_discord_bot():
 def start_groupMe_bot():
 
     # Select an instruction/name dynamically
-    selected_instruction = FemaExpert.instruction
-    selected_name = FemaExpert.name
+    selected_instruction = AssistantExpert.instruction
+    selected_name = AssistantExpert.name
 
     # Create the LLM and conversation chain
     #gpt-4o-mini
