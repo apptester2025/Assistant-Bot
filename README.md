@@ -50,7 +50,7 @@ Before running this project, make sure you have the following installed:
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/ppdrmonitor/Assistant-Bot.git
+   git clone https://github.com/apptester2025/Assistant-Bot.git
    cd Assitant-Bot
    ```
 
