@@ -8,7 +8,7 @@ import logging
 from flask import Blueprint, request, jsonify
 from dotenv import load_dotenv
 from core import LLMSetup
-from expert_instructions import FemaExpert, PAExpert, SOPExpert
+from expert_instructions import AssistantExpert, SOPExpert
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
