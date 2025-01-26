@@ -1,31 +1,31 @@
-# FEMA Compliance Assistant (Alpha)
+# Simple Assistant Bot (Alpha)
 
-A lightweight, multi-platform AI assistant designed to simplify FEMA policy interpretation and compliance. Currently focused on basic parsing capabilities, this assistant helps users navigate FEMA guidelines through natural language queries and contextual AI insights.
+A lightweight, multi-platform AI assistant demonstrating natural language queries and contextual AI insights being integrated into Discord and GroupMe using opensource tools.
 
 ## Features
 
-- **Policy Parsing & Insights**:  
-  Utilizes GPT-based AI to analyze FEMA documents like the Public Assistance Program and Policy Guide (PAPPG) and provide actionable interpretations.  
+- ** Parsing & Insights**:  
+  Utilizes GPT-based AI to analyze documents and provide actionable interpretations.  
 
 - **Multi-Platform Integration**:  
   Accessible via Discord and GroupMe for real-time collaboration and support.
 
 - **Ease of Use**:  
-  Lightweight design with a conversational interface tailored to immediate policy interpretation needs.
+  Lightweight design with a conversational interface tailored to specific needs.
 
 ## Future Roadmap
 
-- **Advanced Policy Analysis**:  
+- **Advanced Analysis**:  
   Automated document updates and contextual guidance for complex scenarios.
 
 - **Workflow Automation**:  
-  Streamlined ticketing, logging, and FEMA compliance workflows.
+  Streamlined processes, logging, and workflows.
 
 - **Dynamic Training Modules**:  
-  AI-powered, adaptive training materials aligned with evolving FEMA policies.
+  AI-powered, adaptive data aligned with evolving situations.
 
 - **Multi-Project Management**:  
-  Tools for tracking assignments and compliance across multiple operations.
+  Tools for tracking across multiple operations.
 
 - **Platform Expansion**:  
   Web, desktop, and mobile application integrations to enhance accessibility.
@@ -50,8 +50,8 @@ Before running this project, make sure you have the following installed:
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/ppdrmonitor/FEMA-Compliance-Bot.git
-   cd FEMA-Compliance-Bot
+   git clone https://github.com/ppdrmonitor/Assistant-Bot.git
+   cd Assitant-Bot
    ```
 
 2. **Set Up Python Environment**
@@ -124,8 +124,8 @@ Before running this project, make sure you have the following installed:
 2. Install AWS CLI and Elastic Beanstalk CLI
 3. Initialize and deploy:
    ```bash
-   eb init -p python-3.x fema-compliance-bot
-   eb create fema-compliance-bot-env
+   eb init -p python-3.x assistant-bot
+   eb create assistant-bot-env
    eb deploy
    ```
 
@@ -135,7 +135,7 @@ Before running this project, make sure you have the following installed:
 3. Deploy:
    ```bash
    heroku login
-   heroku create fema-compliance-bot
+   heroku create assistant-bot
    git push heroku main
    heroku config:set DISCORD_TOKEN=your_discord_token
    ```
@@ -145,7 +145,7 @@ Before running this project, make sure you have the following installed:
 2. Install Azure CLI
 3. Deploy:
    ```bash
-   az webapp up --name fema-compliance-bot --resource-group MyResourceGroup --runtime "PYTHON|3.9"
+   az webapp up --name assistant-bot --resource-group MyResourceGroup --runtime "PYTHON|3.9"
    ```
 
 ## Development

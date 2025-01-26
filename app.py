@@ -11,12 +11,12 @@ def create_app():
 
     # Register blueprints
     app.register_blueprint(api, url_prefix='/api')
-    #https://fema-compliance-bot.onrender.com/groupme_bot/groupme/webhook
+    #https://assistant-bot.onrender.com/groupme_bot/groupme/webhook
     app.register_blueprint(groupme, url_prefix='/groupme_bot')
-    #https://fema-compliance-bot.onrender.com/teams_bot/teams/webhook
+    #https://assistant-bot.onrender.com/teams_bot/teams/webhook
     app.register_blueprint(teams, url_prefix='/teams_bot')
     app.register_blueprint(main)  # No prefix, serves as root route handler
-
+    #https://32a0-2600-1700-851a-8190-2593-9618-b160-9ef3.ngrok-free.app/teams_bot/teams/webhook
     # Enable CORS for all routes
     CORS(app)
 

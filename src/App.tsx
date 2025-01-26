@@ -15,7 +15,7 @@ function App() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <Bot className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
-              <span className="text-xl font-bold dark:text-white">FEMA Compliance Assistant</span>
+              <span className="text-xl font-bold dark:text-white">Assistant Bot</span>
             </div>
             <div className="flex items-center space-x-4">
               <button
@@ -46,10 +46,10 @@ function App() {
         <div className="container mx-auto px-6">
           <div className="text-center">
             <h1 className="text-5xl font-bold mb-6 dark:text-white">
-              Streamline Your FEMA Compliance
+              Streamline Your data processes
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-              Automate your FEMA compliance process with our powerful Discord Assistant. Save time and ensure accuracy in your documentation.
+              Automate any process with our powerful Assistant. Save time and ensure accuracy in your workflows.
             </p>
             <div className="flex justify-center space-x-4">
               <a
@@ -60,7 +60,7 @@ function App() {
                 Contact Team
               </a>
               <a
-                href="https://github.com/ppdrmonitor/FEMA-Compliance-Bot"
+                href="https://github.com/ppdrmonitor/assistant-bot"
                 className="px-8 py-3 bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors flex items-center"
               >
                 <Github className="w-5 h-5 mr-2" />
@@ -77,23 +77,23 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg">
               <Shield className="w-12 h-12 text-indigo-600 dark:text-indigo-400 mb-4" />
-              <h3 className="text-xl font-bold mb-4 dark:text-white">Compliance Automation</h3>
+              <h3 className="text-xl font-bold mb-4 dark:text-white"> Automation</h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Automatically track and manage FEMA compliance requirements through Discord.
+                Automatically track and manage through Discord & GroupMe.
               </p>
             </div>
             <div className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg">
               <Zap className="w-12 h-12 text-indigo-600 dark:text-indigo-400 mb-4" />
               <h3 className="text-xl font-bold mb-4 dark:text-white">Real-time Updates</h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Get instant notifications and updates about compliance status and requirements.
+                Get instant notifications and updates.
               </p>
             </div>
             <div className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg">
               <CheckCircle className="w-12 h-12 text-indigo-600 dark:text-indigo-400 mb-4" />
               <h3 className="text-xl font-bold mb-4 dark:text-white">Easy Integration</h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Simple setup process and seamless integration with your existing Discord server.
+                Simple setup process and seamless integration with your existing Discord or GroupMe server.
               </p>
             </div>
           </div>
@@ -106,10 +106,10 @@ function App() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
               <Bot className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
-              <span className="text-sm dark:text-white">© 2025 FEMA Compliance Assistant</span>
+              <span className="text-sm dark:text-white">© 2025 Assistant Bot</span>
             </div>
             <div className="flex space-x-6">
-              <a href="https://github.com/ppdrmonitor/FEMA-Compliance-Bot" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">
+              <a href="https://github.com/ppdrmonitor/assistant-bot" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">
                 <Github className="w-6 h-6" />
               </a>
               <a href={inviteUrl} className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">
